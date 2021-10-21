@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+
     <title>Canvas Tutorial</title>
 
     <link rel="stylesheet" href="./css/styles.css">
@@ -11,8 +16,17 @@
 <body>
     <h1 class="app__name">simple draw</h1>
     <canvas class="canvas" id="canvas"></canvas>
+    
+    <div class="controls">
+        <input type="range" min="3" max="100" value="25" class="pen_size">
+        <input type="color" class="pick__colour">
+        <input type="button" value="UNDO" class="undo__btn">
+        <input type="button" value="CLEAR" class="clear__btn">
+        <input type="button" value="DOWNLOAD" class="download__btn">
+    </div>
+    
+
     <script src="./javascript/script.js"></script>
-    input
 </body> 
 </html>
 

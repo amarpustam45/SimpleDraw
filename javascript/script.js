@@ -5,7 +5,7 @@ windowSize();
 
 function windowSize(){
     ctx.canvas.width = window.innerWidth;
-    ctx.canvas.height = window.innerHeight; 
+    // ctx.canvas.height = window.innerHeight; 
 }
 
 canvas.addEventListener("click", () => {

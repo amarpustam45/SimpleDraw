@@ -4,10 +4,22 @@
     margin: 0;
 }
 
+:root{
+    --ff-fredrick: 'Fredericka the Great', cursive;
+}
+
 body{
     height: 100%;
     width: 100%;
     overflow: hidden;
+}
+
+.app__name{
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-family: var(--ff-fredrick);
+    text-transform: uppercase;
 }
 
 .canvas{
