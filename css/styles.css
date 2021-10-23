@@ -6,22 +6,57 @@
 
 :root{
     --ff-fredrick: 'Fredericka the Great', cursive;
+    --background-colour: rgba(154, 216, 210, 0.4);
 }
 
 body{
     height: 100%;
     width: 100%;
     overflow: hidden;
+    background-color: var(--background-colour);
 }
 
 .app__name{
-    padding: 10px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
     font-weight: 500;
+    font-size: 2.5rem;
     font-family: var(--ff-fredrick);
     text-transform: uppercase;
 }
 
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 64px;
+}
+
+.pen__size{
+    width: 300px;
+    cursor: pointer;
+}
+
+.pick__colour{
+    width: 100px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.btn{
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: var(--ff-fredrick);
+    background-color: rgba(255, 255, 185, 0.4);
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
 .canvas{
-    background-color: rgb(159, 253, 248);    
+    display: block;
+    margin: auto;
 }
