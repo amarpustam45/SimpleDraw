@@ -3,7 +3,8 @@ const ctx = canvas.getContext('2d');
 let isDrawing = false;
 let mouseX = null;
 let mouseY = null;
-
+let colour = "black";
+let pen__size = 10;
 
 window.onload = () => {
     ctx.canvas.width = window.innerWidth - 40;
@@ -22,7 +23,7 @@ function clear(){
     ctx.beginPath();
     ctx.fillStyle = "white";
     ctx.rect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    ctx.fill();    
+    ctx.fill();   
 }
 
 canvas.addEventListener("mousedown", (e) => {
@@ -50,8 +51,9 @@ canvas.addEventListener("mouseup", (e) => {
 
 function draw(x1, y1, x2, y2){
     ctx.beginPath();
-    ctx.strokeStyle = "black";
-    ctx.lineWith = 3;
+    ctx.strokeStyle = colour;
+    ctx.lineCap = "round";
+    ctx.lineWidth = pen__size;
     ctx.moveTo(x1, y1);
     ctx.lineTo(x2, y2);
     ctx.stroke();

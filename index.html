@@ -18,11 +18,11 @@
     <canvas class="canvas" id="canvas"></canvas>
     
     <div class="controls">
-        <input type="range" min="3" max="100" value="25" class="pen__size">
-        <input type="color" class="pick__colour">
-        <input type="button" value="UNDO" class="undo__btn btn">
-        <input type="button" value="CLEAR" class="clear__btn btn">
-        <input type="button" value="DOWNLOAD" class="download__btn btn">
+        <input type="range" onInput="pen__size = this.value" min="3" max="100" value="10" class="pen__size">
+        <input type="color" onInput="colour = this.value" class="pick__colour">
+        <button class="undo__btn btn">UNDO</button>
+        <button onclick="clear()" class="clear__btn btn">CLEAR</button>
+        <button class="download__btn btn">DOWNLOAD</button>
     </div>
     
 
