@@ -11,14 +11,13 @@ let index = -1;
 window.onload = () => {
     ctx.canvas.width = window.innerWidth - 40;
     ctx.canvas.height = window.innerHeight - 128;
-    ctx.fillStyle = "white";
-    ctx.rect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    ctx.fill();
+    clear_screen();
 }
 
 window.addEventListener("resize", () => {
     ctx.canvas.width = window.innerWidth - 40;
     ctx.canvas.height = window.innerHeight - 128; 
+    clear_screen();
 })
 
 function clear_screen(){
@@ -116,4 +115,9 @@ function undo_function(){
         undo_array.pop();
         ctx.putImageData(undo_array[index], 0, 0);
     }
+}
+
+function downloadImagge(e){
+    const imageURI = canvas.toDataURL("image/jpg");
+    e.href = imageURI;
 }
