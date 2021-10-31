@@ -7,6 +7,7 @@ let colour = "black";
 let pen__size = 10;
 let undo_array = [];
 let index = -1;
+const rect = canvas.getBoundingClientRect();
 
 window.onload = () => {
     ctx.canvas.width = window.innerWidth - 40;
@@ -67,6 +68,36 @@ function clear_screen(){
 //     console.log(undo_array);
 //     console.log(index);
 // }
+
+canvas.addEventListener("touchstart", (e) => {
+    mouseX = e.touches[0].clientX - rect.left;
+    mouseY = e.touches[0].clientY - rect.top;
+    isDrawing =  true;
+})
+
+canvas.addEventListener("touchmove", (e) => {
+    if (isDrawing === true){
+        draw(mouseX, mouseY, e.touches[0].clientX -rect.left, e.touches[0].clientY - rect.top);
+        mouseX = e.touches[0].clientX - rect.left;
+        mouseY = e.touches[0].clientY - rect.top;
+    }
+})
+
+canvas.addEventListener("touchend", (e) => {
+    if (isDrawing === true){
+        draw(mouseX, mouseY, e.touches[0].clientX - rect.left, e.touches[0].clientY - rect.top);
+        mouseX = null;
+        mouseY = null;
+        isDrawing = false;
+    }
+
+    undo_array.push(ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height));
+    index += 1;
+    console.log(undo_array);
+    console.log(index);
+})
+
+// -----------------------------------------------------------------------
 
 canvas.addEventListener("mousedown", (e) => {
     mouseX = e.offsetX;
