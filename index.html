@@ -18,11 +18,15 @@
     <canvas class="canvas" id="canvas"></canvas>
     
     <div class="controls">
-        <input type="range" onInput="pen__size = this.value" min="3" max="100" value="10" class="pen__size">
-        <input type="color" onInput="colour = this.value" class="pick__colour">
-        <button onclick="undo_function()" class="undo__btn btn">UNDO</button>
-        <button onclick="clear_screen()" class="clear__btn btn">CLEAR</button>
-        <a download="image.png" onclick="downloadImage(this)" href=""><button class="download__btn btn">DOWNLOAD</button></a>
+        <div class="draw__controls">
+            <input type="range" onInput="pen__size = this.value" min="3" max="100" value="10" class="pen__size">
+            <input type="color" onInput="colour = this.value" class="pick__colour">
+        </div>
+        <div class="buttons">
+            <button onclick="undo_function()" class="undo__btn btn">UNDO</button>
+            <button onclick="clear_screen()" class="clear__btn btn">CLEAR</button>
+            <a download="image.png" onclick="downloadImage(this)" href=""><button class="download__btn btn">DOWNLOAD</button></a>
+        </div>
     </div>
     
 

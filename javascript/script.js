@@ -10,13 +10,13 @@ let index = -1;
 
 window.onload = () => {
     ctx.canvas.width = window.innerWidth - 40;
-    ctx.canvas.height = window.innerHeight - 128;
+    ctx.canvas.height = window.innerHeight - 160;
     clear_screen();
 }
 
 window.addEventListener("resize", () => {
     ctx.canvas.width = window.innerWidth - 40;
-    ctx.canvas.height = window.innerHeight - 128; 
+    ctx.canvas.height = window.innerHeight - 160; 
     clear_screen();
 })
 

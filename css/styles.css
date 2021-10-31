@@ -29,10 +29,17 @@ body{
 }
 
 .controls{
+    height: 96px;
+}
+
+.draw__controls{
+    padding: 5px;
+}
+
+.buttons{
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-around;
-    height: 64px;
 }
 
 .pen__size{
@@ -61,7 +68,17 @@ body{
     margin: auto;
 }
 
-/* @media only screen and (max-width: 450px){
+@media only screen and (min-width: 450px){
+    .controls{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .pen__size,
+    .pick__colour,
+    .btn{
+        margin: 0px 30px;
+    }
     
-    
-} */
+}
