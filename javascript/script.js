@@ -117,7 +117,7 @@ function undo_function(){
     }
 }
 
-function downloadImagge(e){
-    const imageURI = canvas.toDataURL("image/jpg");
+function downloadImage(e){
+    const imageURI = canvas.toDataURL("image/png");
     e.href = imageURI;
 }
